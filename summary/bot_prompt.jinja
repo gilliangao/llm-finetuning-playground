@@ -1,0 +1,11 @@
+# 1. Get user input
+user_input = "I think I would like to learn about the noble jaguar. Can you tell me more about them?"
+
+# 2. Get the prompt template for the chatbot
+chat_prompt = load_template(
+    "prompts/summary/bot_prompt.jinja",
+    {
+        "running_summary": current_summary.model_dump(),
+        "input_message": user_input,
+    }
+)
